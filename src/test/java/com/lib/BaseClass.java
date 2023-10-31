@@ -1,15 +1,17 @@
 package com.lib;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+/**
+ * 
+ */
 public class BaseClass {
 	private static WebDriver driver;
-	protected void takeScreenshort() {}
-	protected void closeBrowser() {}
-	
+		
 	protected void lauchBrowser() {
 		WebDriverManager.chromedriver().setup();
 		driver  = new ChromeDriver();
@@ -24,4 +26,16 @@ public class BaseClass {
 		}
 		driver.quit();
 	}
+	
+	
+	/**
+	 * This method helps to take a screenshort of entire webpage
+	 */
+	protected void takeScreenshortEntirePage(String path) {}
+	
+	
+	/**
+	 * This method helps to take a screenshort of specified webelement
+	 */
+	protected void takeScreenshortWebElement(WebElement element, String path) {}
 }
