@@ -1,0 +1,8 @@
+# Ignore compiled Java class files
+*.class
+
+# Ignore target directories
+target/
+
+# Ignore log files
+*.log
