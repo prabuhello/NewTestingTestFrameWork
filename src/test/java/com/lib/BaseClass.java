@@ -10,11 +10,18 @@ public class BaseClass {
 	protected void takeScreenshort() {}
 	protected void closeBrowser() {}
 	
+	/**
+	 * This method is used for launch the web browser
+	 */
 	protected void lauchBrowser() {
 		WebDriverManager.chromedriver().setup();
 		driver  = new ChromeDriver();
 	}
 	
+	
+	/**
+	 * Quit the Browser
+	 */
 	protected void quitBrowser() {
 		try {
 			Thread.sleep(4000);
